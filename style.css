@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #9400FF;
+    --secondary-color: #AED2FF;
+    --bg-dark: #27005D;
+    --faded: #E4F1FF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.clock-body {
+    position: relative;
+}
+
+.clock-body img {
+    /* height: 65vh; */
+    width: 70vw;
+}
+
+.center {
+    width: 3.5vw;
+    height: 3.5vw;
+    background: var(--bg-dark);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#hour,
+#second,
+#minute {
+    background: var(--bg-dark);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom;
+}
+
+#hour {
+    width: 2vw;
+    height: 17vw;
+    left: 23%;
+}
+
+#second {
+    width: 1vw;
+    height: 23vw;
+    left: 36%;
+}
+
+#minute {
+    width: 1.5vw;
+    height: 21vw;
+    left: 29%;
+}
+
+@media screen and (min-width: 1280px) {
+    .clock-body img {
+        width: 80vh;
+    }
+
+    .center {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    #hour {
+        width: 1.1vw;
+        height: 17vh;
+        left: 17%;
+    }
+
+    #second {
+        width: .5vw;
+        height: 26vh;
+        left: 35.3%;
+    }
+
+    #minute {
+        width: 0.8vw;
+        height: 20vh;
+        left: 26.8%;
+    }
+}
